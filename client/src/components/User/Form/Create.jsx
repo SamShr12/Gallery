@@ -6,19 +6,20 @@ const thumbsContainer = {
   display: 'flex',
   flexDirection: 'row',
   flexWrap: 'wrap',
-  marginTop: 16
+  marginTop: "16px",
+  border: '1px solid #eaeaea',
+
 };
 
+//for image display after drag
 const thumb = {
   display: 'inline-flex',
   borderRadius: 2,
-  border: '1px solid #eaeaea',
   marginBottom: 8,
   marginRight: 8,
-  width: 100,
-  height: 100,
-  padding: 4,
-  boxSizing: 'border-box'
+  width: "800px",
+  height: "400px",
+  boxSizing: 'border-box',
 };
 
 const thumbInner = {
@@ -29,8 +30,9 @@ const thumbInner = {
 
 const img = {
   display: 'block',
-  width: 'auto',
-  height: '100%'
+  width: '100%',
+  height: '100%',
+  objectFit:"contain"
 };
 
 
@@ -69,7 +71,7 @@ function Create() {
     <section>
       <Nav />
       <section className="container">
-      <div {...getRootProps({className: 'dropzone'})}>
+      <div  {...getRootProps({className: 'dropzone'})}>
         <input {...getInputProps()} />
         <p>Drag 'n' drop some files here, or click to select files</p>
       </div>

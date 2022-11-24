@@ -39,7 +39,7 @@ nav{
 //others
 
 .w-80{
-    width: 95%;
+    width: 90%;
     margin: 0 auto;
 }
 .svgfh{
@@ -67,6 +67,11 @@ input{
 
 .submit-btn:hover{
     background: #2a8cb9;
+}
+
+.grid-5{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
 }
 
 .grid-7{
@@ -132,4 +137,9 @@ input{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 5px;
+}
+
+.sjowq{
+    width: 242px;
+    height: 160px;
 }

@@ -6,8 +6,8 @@ function Profile() {
     <section>
       <Nav />
 
-      <section>
-        <h2>Profile</h2>
+      <section className='w-80 '>
+        <h2 className='mt-10'>Profile</h2>
       </section>
     </section>
   )
