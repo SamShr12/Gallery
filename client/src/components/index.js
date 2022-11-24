@@ -1,0 +1,7 @@
+export {default as Home} from './User/Home'
+export {default as Login} from './User/Login'
+export {default as SignUp} from './User/SignUp'
+export {default as Create} from './User/Form/Create'
+export {default as Edit} from './User/Form/Edit'
+export {default as Profile} from './User/Profile/Profile'
+export {default as PinDetail} from './User/Blog/PinDetail'
