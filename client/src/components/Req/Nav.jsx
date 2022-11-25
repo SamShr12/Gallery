@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {Link} from 'react-router-dom'
 import test from '../../../image/test.jpg'
+import {BsBellFill} from 'react-icons/bs'
 function Nav() {
+  const [toggle, settoggle] = useState(false)
   return (
     <nav>
     <header className='navheader'>
@@ -12,12 +14,15 @@ function Nav() {
         </Link>
       </div>
 
+        <div className='my-5'>
+          <input type="text" name="" id="" placeholder='Search...' />
+        </div>
+        
       <div className='active-nvabar'>
-        <Link to="/" className='linkofthenav'>Home</Link>
         <Link to="/explore" className='linkofthenav'>Explore</Link>
         <Link to="/post" className='linkofthenav'>Post</Link>
-        {/* <Link to={`/profile`}><img src="" alt="" className='profilecontext' /></Link> */}
-        <Link to={`/profile`}>Samyam</Link>
+        <BsBellFill className='text-xl mt-1 linkofthenav'/>
+        <Link to={`/profile/random`} className='linkofthenav'>Samyam</Link>
       </div>
     </header>
   </nav>

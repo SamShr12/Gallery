@@ -1,5 +1,5 @@
 $btn-color: #47baef;
-
+$text-color: #273339;
 //nav
 .logo-nav {
     // height: 6em;
@@ -9,11 +9,11 @@ $btn-color: #47baef;
 
 nav{
     width: 100%;
-    background:#ccc;
-    color: white;
+    // background:#ccc;
+    color: $text-color;
 }
 .navheader{
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     // min-height: 90px;
     place-content: space-between;
@@ -21,11 +21,13 @@ nav{
 
     & .active-nvabar{
         margin-top: 2em;
+        display: flex;
 
     }
 
     & .active-nvabar .linkofthenav{
-        margin-right: 40px;
+        margin-right: 50px;
+        font-weight: 600;
     }
 }
 
@@ -34,7 +36,8 @@ nav{
     height: 30px;
     border: none;
     border-radius: 50%;
-    background: #fff;
+    // background: #;
+    font-weight: 600;
 }
 //others
 
@@ -72,11 +75,18 @@ input{
 .grid-5{
     display: grid;
     grid-template-columns: repeat(5,1fr);
+    gap: 10px;
 }
 
+.grid-6{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    gap: 10px;
+}
 .grid-7{
     display: grid;
     grid-template-columns: repeat(7,1fr);
+    gap: 10px;
 }
 
 .text-featured{
@@ -85,12 +95,18 @@ input{
 }
 
 .illust-featured{
-
+    margin-left: 10px;
     & img{
-        width: 635px;
-        height: 400px;
+        width: 575px;
+        height: 300px;
+        border-radius: 10px;
         object-fit: cover;
         object-position: center;
+        transition: opacity 700ms;
+    }
+
+    & img:hover{
+        opacity: 0.8;
     }
     
 }
@@ -119,8 +135,17 @@ input{
     }
 }
 
-.illustrations img{
-    width: 360px;
+.illustrations {
+    
+    & img{
+        width: 360px;
+        object-fit: cover;
+        transition: opacity 700ms;
+    }
+
+    & img:hover{
+        opacity: 0.8;
+    }
 }
 
 .slklk{
@@ -142,4 +167,77 @@ input{
 .sjowq{
     width: 242px;
     height: 160px;
+}
+
+.profile-img{
+    & img{
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 50%;
+    }
+}
+
+.profile-sec-sd{
+
+    & img{
+        width: 254px;
+        height: 204px;
+        border-radius: 10px;
+        object-fit: cover;
+        object-position: center;
+        transition: transform 400ms, opactiy 400ms;
+    }
+
+    & img:hover{
+        transform: scale(1.05);
+        opacity: 0.8;
+    }
+    
+}
+
+.background-profile-cover{
+    margin-top: 20px;
+    width: 100%;
+    height: 300px;
+    & img{
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        opacity: 0.7;
+    }
+
+    
+}
+
+.profile-cover-illust{
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(to right, #000, $text-color);
+    position: absolute;
+    opacity: 0.9;
+}
+
+.iuknbfkj{
+    position: relative;
+    margin-top: -30px;
+}
+
+.bac-cover{
+    width: 65%;
+    background: #e6e6e6;
+    padding: 50px;
+    border-radius: 40px;
+
+    & img{
+        width: 100%;
+        height: 670px;
+        object-fit: contain;
+        object-position: center;
+    }
+}
+
+.border-radius-50{
+    border-radius: 50%;
 }

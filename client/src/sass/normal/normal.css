@@ -5,12 +5,11 @@
 
 nav {
   width: 100%;
-  background: #ccc;
-  color: white;
+  color: #273339;
 }
 
 .navheader {
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   place-content: space-between;
   display: -webkit-box;
@@ -20,10 +19,14 @@ nav {
 
 .navheader .active-nvabar {
   margin-top: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .navheader .active-nvabar .linkofthenav {
-  margin-right: 40px;
+  margin-right: 50px;
+  font-weight: 600;
 }
 
 .profilecontext {
@@ -31,7 +34,7 @@ nav {
   height: 30px;
   border: none;
   border-radius: 50%;
-  background: #fff;
+  font-weight: 600;
 }
 
 .w-80 {
@@ -72,6 +75,15 @@ input {
   display: grid;
   -ms-grid-columns: (1fr)[5];
       grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+
+.grid-6 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[6];
+      grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
 }
 
 .grid-7 {
@@ -79,6 +91,7 @@ input {
   display: grid;
   -ms-grid-columns: (1fr)[7];
       grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
 }
 
 .text-featured {
@@ -86,13 +99,24 @@ input {
   font-size: 30px;
 }
 
+.illust-featured {
+  margin-left: 10px;
+}
+
 .illust-featured img {
-  width: 635px;
-  height: 400px;
+  width: 575px;
+  height: 300px;
+  border-radius: 10px;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
+  -webkit-transition: opacity 700ms;
+  transition: opacity 700ms;
+}
+
+.illust-featured img:hover {
+  opacity: 0.8;
 }
 
 .inner-contents h2 {
@@ -117,6 +141,14 @@ input {
 
 .illustrations img {
   width: 360px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: opacity 700ms;
+  transition: opacity 700ms;
+}
+
+.illustrations img:hover {
+  opacity: 0.8;
 }
 
 .slklk {
@@ -141,5 +173,83 @@ input {
 .sjowq {
   width: 242px;
   height: 160px;
+}
+
+.profile-img img {
+  width: 100px;
+  height: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 50%;
+}
+
+.profile-sec-sd img {
+  width: 254px;
+  height: 204px;
+  border-radius: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  -webkit-transition: opactiy 400ms, -webkit-transform 400ms;
+  transition: opactiy 400ms, -webkit-transform 400ms;
+  transition: transform 400ms, opactiy 400ms;
+  transition: transform 400ms, opactiy 400ms, -webkit-transform 400ms;
+}
+
+.profile-sec-sd img:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  opacity: 0.8;
+}
+
+.background-profile-cover {
+  margin-top: 20px;
+  width: 100%;
+  height: 300px;
+}
+
+.background-profile-cover img {
+  width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0.7;
+}
+
+.profile-cover-illust {
+  width: 100%;
+  height: 300px;
+  background: -webkit-gradient(linear, left top, right top, from(#000), to(#273339));
+  background: linear-gradient(to right, #000, #273339);
+  position: absolute;
+  opacity: 0.9;
+}
+
+.iuknbfkj {
+  position: relative;
+  margin-top: -30px;
+}
+
+.bac-cover {
+  width: 65%;
+  background: #e6e6e6;
+  padding: 50px;
+  border-radius: 40px;
+}
+
+.bac-cover img {
+  width: 100%;
+  height: 670px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.border-radius-50 {
+  border-radius: 50%;
 }
 /*# sourceMappingURL=normal.css.map */
