@@ -31,6 +31,14 @@ nav{
     }
 }
 
+.searchinput{
+    width: 600px;
+    height: 40px;
+    margin-top: -5px;
+    margin-right: 25px;
+    border-radius: 10px;
+}
+
 .profilecontext{
     width: 30px;
     height: 30px;
@@ -39,6 +47,8 @@ nav{
     // background: #;
     font-weight: 600;
 }
+
+
 //others
 
 .w-80{
@@ -225,7 +235,7 @@ input{
 }
 
 .bac-cover{
-    width: 65%;
+    width: 100%;
     background: #e6e6e6;
     padding: 50px;
     border-radius: 40px;
@@ -240,4 +250,64 @@ input{
 
 .border-radius-50{
     border-radius: 50%;
+}
+
+.thumb{
+    width: 400px;
+    height: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.whole-section{
+    width: 60%;
+    margin: 0 auto;
+    border: 2px solid #f4f2f4;;
+    padding: 30px;
+    border-radius: 10px;
+    background: #ebebeb;
+    margin-top: 30px;
+}
+
+.create-pin input,textarea{
+    width: 100%;
+    border: none;
+}
+
+.cursor-pointer{
+    cursor: pointer;
+}
+
+.sadas-test{
+    height: 120px;
+    padding: 7px;
+}
+
+.drop-filesthing{
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 10px;
+    color: #000;
+    font-weight: 700;
+    cursor: pointer;
+    border: 1px dotted #000;
+    height: 300px;
+}
+
+.sdaiuinmbv{
+    margin: 0 auto;
+    margin-top: 120px;
+    // background: #273339;
+}
+
+.recommended-contents{
+    & img{
+        width: 300px;
+        height: 200px;
+        border-radius: 10px;
+        object-fit: cover;
+        object-position: center;
+    }
 }

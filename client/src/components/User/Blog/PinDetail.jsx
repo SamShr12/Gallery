@@ -61,8 +61,17 @@ function PinDetail() {
             </div>
         </section>
 
-        <section className=''>
-            <h2>Similar Recommendation</h2>
+        <section className='w-80 pt-12 mb-5'>
+            <h2 className='text-3xl font-bold'>Similar Recommendation</h2>
+
+            <div className='grid-5 mt-5'>
+                <div className='recommended-contents'>
+                    <img src={test} alt="" />
+                    <div className='recommend-contents'>
+                        <h2 className='font-semibold text-lg'>Very Nice</h2>
+                    </div>
+                </div>
+            </div>
         </section>
     </section>
   )

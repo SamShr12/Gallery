@@ -14,14 +14,15 @@ function Nav() {
         </Link>
       </div>
 
-        <div className='my-5'>
-          <input type="text" name="" id="" placeholder='Search...' />
-        </div>
+     
         
       <div className='active-nvabar'>
+      <div className=''>
+          <input type="text" name="" id="" placeholder='Search...' className='searchinput' />
+        </div>
         <Link to="/explore" className='linkofthenav'>Explore</Link>
         <Link to="/post" className='linkofthenav'>Post</Link>
-        <BsBellFill className='text-xl mt-1 linkofthenav'/>
+        <BsBellFill className='text-xl mt-1 linkofthenav cursor-pointer'/>
         <Link to={`/profile/random`} className='linkofthenav'>Samyam</Link>
       </div>
     </header>

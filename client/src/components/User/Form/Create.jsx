@@ -11,7 +11,6 @@ const thumbsContainer = {
 
 };
 
-//for image display after drag
 const thumb = {
   display: 'inline-flex',
   borderRadius: 2,
@@ -55,7 +54,6 @@ function Create() {
         <img
           src={file.preview}
           style={img}
-          // Revoke data uri after image is loaded
           onLoad={() => { URL.revokeObjectURL(file.preview) }}
         />
       </div>
@@ -63,21 +61,49 @@ function Create() {
   ));
 
   useEffect(() => {
-    // Make sure to revoke the data uris to avoid memory leaks, will run on unmount
     return () => files.forEach(file => URL.revokeObjectURL(file.preview));
   }, []);
 
   return (
     <section>
       <Nav />
-      <section className="container">
+      <section className="whole-section">
       <div  {...getRootProps({className: 'dropzone'})}>
         <input {...getInputProps()} />
-        <p>Drag 'n' drop some files here, or click to select files</p>
+        <div className='drop-filesthing'>
+        <p className='text-center sdaiuinmbv'>Drop you files here</p>
+        </div>
       </div>
       <aside style={thumbsContainer}>
         {thumbs}
       </aside>
+
+      <div>
+        <form action="">
+            <div className='create-pin'>
+              <input type="text" name="" id="" placeholder='Title*' autoFocus required/>
+            </div>
+            <div className='create-pin my-4'>
+              <textarea name="" id="" className='sadas-test' placeholder='Description*'></textarea>
+            </div>
+            <div className='create-pin'>
+              <input type="text" name="" id="" placeholder='Enter your tags' />
+              <div className='recommendation-tag-create mt-10'>
+                <h2>Recommend tag</h2>
+                <div className='flex gap-2 my-5'>
+                  <div className='border px-2 py-2 border-solid border-[#ccc] text-[#3d7699] text-sm cursor-pointer'>background</div>
+                  <div className='border px-2 py-2 border-solid border-[#ccc] text-[#3d7699] text-sm cursor-pointer'>nature</div>
+                  <div className='border px-2 py-2 border-solid border-[#ccc] text-[#3d7699] text-sm cursor-pointer'>workinflow</div>
+                  <div className='border px-2 py-2 border-solid border-[#ccc] text-[#3d7699] text-sm cursor-pointer'>cat</div>
+                  <div className='border px-2 py-2 border-solid border-[#ccc] text-[#3d7699] text-sm cursor-pointer'>scenery</div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <button className='submit-btn' type='submit'>Submit</button>
+            </div>
+        </form>
+      </div>
     </section>
     </section>
   )
