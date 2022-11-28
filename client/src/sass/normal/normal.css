@@ -51,7 +51,15 @@ nav {
 }
 
 .svgfh {
-  margin-top: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding: 50px;
+  border-radius: 10px;
+  -webkit-box-shadow: 5px 10px 18px darkgray;
+          box-shadow: 5px 10px 18px darkgray;
 }
 
 .text-big {
@@ -319,5 +327,80 @@ input {
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
+  -webkit-transition: opacity 600ms;
+  transition: opacity 600ms;
+}
+
+.recommended-contents img:hover {
+  opacity: 0.7;
+}
+
+.reactions {
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  margin-top: 10px;
+}
+
+.profile-nav-img {
+  width: 30px;
+  border-radius: 50%;
+}
+
+.sssvvkkkk img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.profileimgheresub img {
+  height: 200px;
+  width: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.profileimgheresub {
+  padding: 9px;
+  border-bottom: 1px solid #949494;
+}
+
+.comment-section {
+  margin-top: 40px;
+}
+
+.comment-section input[type=text] {
+  width: 450px;
+  border-radius: 10px;
+}
+
+.comment-profile-user img {
+  width: 40px;
+  height: 40px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+
+.login-text-input input {
+  width: 400px;
+  border-radius: 5px;
+}
+
+.body-signup input {
+  width: 400px;
+  border-radius: 5px;
+}
+
+.margin-auto {
+  padding: 10px 100px 0 133px;
+  margin: 0 auto;
+  font-size: 24px;
 }
 /*# sourceMappingURL=normal.css.map */

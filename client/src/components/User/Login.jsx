@@ -1,24 +1,30 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import Nav from '../Req/Nav'
+
 function Login() {
   return (
-    <section className='text-center svgfh'>
-      <h1 className='text-big'>Login</h1>
-      <section>
-          <div>
+    <section className='svgfh'>
+      <h1 className='text-xl font-bold mb-5'>Login</h1>
+      <section className='login-text-input'>
+          <div className='mb-5'>
+            <div className='mb-1'>
             <label htmlFor="email">Email: </label>
-            <input type="email" name="" id="" placeholder='Enter your email' />
+            </div>
+            <input type="email" name="" id="" placeholder='Enter your email' autoFocus required/>
           </div>
           <div>
-            <label htmlFor="password">Password: </label>
-            <input type="password" name="" id="" placeholder='Enter your password' />
+            <div className='mb-1'>
+              <label htmlFor="password">Password: </label>
+            </div>
+            <input type="password" name="" id="" placeholder='Enter your password' required/>
           </div>
-          <div>
-            <button className='submit-btn'>Submit</button>
+          <div className='mt-5'>
+            <button className='submit-btn w-full'>Submit</button>
           </div>
           
-          <div>
-            <h2>Dont have a account? <Link to={`/signup`}>Register</Link></h2>
+          <div className='mt-5 text-center'>
+            <h2 className='font-base'>Dont have a account ? <Link to={`/signup`}><strong className='text-[#47baef] font-base'>Register</strong></Link></h2>
           </div>
       </section>
     </section>

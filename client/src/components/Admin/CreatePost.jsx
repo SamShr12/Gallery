@@ -1,73 +1,72 @@
 import React, { useEffect, useState } from 'react'
-import Nav from '../../Req/Nav'
+import AdminNav from './AdminNav'
 import {useDropzone} from 'react-dropzone';
 
 const thumbsContainer = {
-  display: 'flex',
-  flexDirection: 'row',
-  flexWrap: 'wrap',
-  marginTop: "16px",
-  border: '1px solid #eaeaea',
-
-};
-
-const thumb = {
-  display: 'inline-flex',
-  borderRadius: 2,
-  marginBottom: 8,
-  marginRight: 8,
-  width: "800px",
-  height: "400px",
-  boxSizing: 'border-box',
-};
-
-const thumbInner = {
-  display: 'flex',
-  minWidth: 0,
-  overflow: 'hidden'
-};
-
-const img = {
-  display: 'block',
-  width: '100%',
-  height: '100%',
-  objectFit:"contain"
-};
-
-
-function Create() {
-  const [files, setFiles] = useState([]);
-  const {getRootProps, getInputProps} = useDropzone({
-    accept: {
-      'image/*': []
-    },
-    onDrop: acceptedFiles => {
-      setFiles(acceptedFiles.map(file => Object.assign(file, {
-        preview: URL.createObjectURL(file)
-      })));
-    }
-  });
+    display: 'flex',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    marginTop: "16px",
+    border: '1px solid #eaeaea',
   
-  const thumbs = files.map(file => (
-    <div style={thumb} key={file.name}>
-      <div style={thumbInner}>
-        <img
-          src={file.preview}
-          style={img}
-          onLoad={() => { URL.revokeObjectURL(file.preview) }}
-        />
+  };
+  
+  const thumb = {
+    display: 'inline-flex',
+    borderRadius: 2,
+    marginBottom: 8,
+    marginRight: 8,
+    width: "800px",
+    height: "400px",
+    boxSizing: 'border-box',
+  };
+  
+  const thumbInner = {
+    display: 'flex',
+    minWidth: 0,
+    overflow: 'hidden'
+  };
+  
+  const img = {
+    display: 'block',
+    width: '100%',
+    height: '100%',
+    objectFit:"contain"
+  };
+  
+  
+function CreatePost() {
+    const [files, setFiles] = useState([]);
+    const {getRootProps, getInputProps} = useDropzone({
+      accept: {
+        'image/*': []
+      },
+      onDrop: acceptedFiles => {
+        setFiles(acceptedFiles.map(file => Object.assign(file, {
+          preview: URL.createObjectURL(file)
+        })));
+      }
+    });
+    
+    const thumbs = files.map(file => (
+      <div style={thumb} key={file.name}>
+        <div style={thumbInner}>
+          <img
+            src={file.preview}
+            style={img}
+            onLoad={() => { URL.revokeObjectURL(file.preview) }}
+          />
+        </div>
       </div>
-    </div>
-  ));
-
-  useEffect(() => {
-    return () => files.forEach(file => URL.revokeObjectURL(file.preview));
-  }, []);
-
+    ));
+  
+    useEffect(() => {
+      return () => files.forEach(file => URL.revokeObjectURL(file.preview));
+    }, []);
   return (
     <section>
-      <Nav />
-      <section className="whole-section">
+        <AdminNav />
+        <section className="whole-section">
       <div  {...getRootProps({className: 'dropzone'})}>
         <input {...getInputProps()} />
         <div className='drop-filesthing'>
@@ -109,4 +108,4 @@ function Create() {
   )
 }
 
-export default Create
+export default CreatePost

@@ -1,5 +1,5 @@
 import {Routes, Route} from 'react-router-dom'
-import { Create, Explore, Home, Login, PinDetail, Profile, SignUp } from './components'
+import { AdminCreate, AdminLogin, Create, CreatePost, Dashboard, Explore, Home, Login, PinDetail, Profile, ServerMessage, SignUp } from './components'
 function App() {
 
   return (
@@ -12,6 +12,12 @@ function App() {
         <Route path='/art/:id' element={<PinDetail />} />
         <Route path='/profile/:name' element={<Profile />} />
         <Route path='/explore' element={<Explore />} />
+        {/* //Admin */}
+        <Route path='/admin/login' element={<AdminLogin />} />
+        <Route path='/admin/dashboard' element={<Dashboard />} />
+        <Route path='/admin/create' element={<AdminCreate />} />
+        <Route path='/admin/create/servermessage' element={<ServerMessage />} />
+        <Route path='/admin/create/post' element={<CreatePost />} />
       </Routes>
     </div>
   )

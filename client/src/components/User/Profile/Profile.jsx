@@ -18,8 +18,11 @@ function Profile() {
             <div className='profile-img'>
               <img src={testprofileimage} alt="" />
             </div>
-            <div className='mt-10'>
-              <h2 className='font-bold text-2xl'>Sam</h2>
+            <div className='mt-14 w-full'>
+              <div className='work-flex '>
+                <h2 className='font-bold text-2xl'>Sam</h2>
+                <button class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 ml-16 border-blue-700 hover:border-blue-500" style={{borderRadius:"20px"}}>Follow</button>
+              </div>
               <p className='my-2'><strong>0</strong> Following</p>
               <p>Lorem ipsum dolor siriatur velit porro? Numquatiae ad nobis.</p>
             </div>
